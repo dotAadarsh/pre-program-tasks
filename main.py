@@ -36,7 +36,7 @@ def main():
     }
 
     print("1. Add, 2. Subtract, 3. Multiply, 4. Divide, 5. Square")
-    operation = int(input("Enter the choice (1-6): "))
+    operation = int(input("Enter the choice (1-5): "))
 
     if operation in operations:
         if operation == 5:
