@@ -1,19 +1,29 @@
+# Program to perform simple calculation
+
+# Addition
 def add(x, y):
     return x + y
 
+# Subtraction
 def subtract(x, y):
     return x - y
 
+# Multiplication
 def multiply(x, y):
     return x * y
 
+# Division
 def divide(x , y):
-    return x / y
+    if y == 0:
+        return "Division by Zero Error"
+    else:
+        return x / y
 
+# Exponentiation
 def square(x):
     return x ** 2
 
-
+# Main Function
 def main():
     print("Simple Calculator")
     
