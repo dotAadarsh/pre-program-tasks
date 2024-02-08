@@ -4,6 +4,24 @@ Create a simple fast API that takes the first and last name of a user and return
 
 ## To run
 
+Clone the repo
+
+```bash
+git clone https://github.com/dotAadarsh/pre-program-tasks.git
+```
+
+Switch to task 2 branch
+
+```bash
+git checkout taskID_2
+```
+
+Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
 To run the application, enter the following command in your terminal:
 
 ```bash
