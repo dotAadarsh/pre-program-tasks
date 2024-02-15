@@ -1,18 +1,10 @@
-# Import the FastAPI Library
 from fastapi import FastAPI
 
-app = FastAPI() # Create an instance
+# Import the router
+from routers import pdf
 
-# Define a path operation for the root endpoint
-@app.get("/")
-def hello():
-    return {"message": "Hello there!"}
+# Create a FastAPI instance
+app = FastAPI()
 
-# Define a path operation for the /name endpoint
-@app.get("/name")
-def get_full_name(first_name: str, last_name: str):
-    # Concatenate the first and second name
-    full_name = first_name + " " + last_name
-
-    # Return the full name as a JSON obj
-    return {"full_name": full_name}
+# Mount the PDF router at the "/pdf" prefix with "PDF" tag for documentation
+app.include_router(pdf.router, prefix="/pdf", tags=["PDF"])
