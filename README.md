@@ -13,7 +13,7 @@ git clone https://github.com/dotAadarsh/pre-program-tasks.git
 Switch to task 2 branch
 
 ```bash
-git checkout taskID_2
+git checkout taskID_3
 ```
 
 Install the dependencies
@@ -30,8 +30,17 @@ uvicorn main:app --reload
 
 The above command will start the FastAPI application, and you can access it at http://127.0.0.1:8000/docs to interact with the Swagger documentation or http://127.0.0.1:8000/redoc for the ReDoc documentation.
 
-you can test the API by visiting http://127.0.0.1:8000/name?first_name=Aadarsh&last_name=Kannan in your browser. You can change the values of the first_name and last_name parameters in the URL to see different results.
+To send a POST request to the endpoint using `curl`, open a new terminal and enter the following command.
+
+```bash
+curl -X POST "http://127.0.0.1:8000/pdf/upload/" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@path/to/your/file.pdf"
+```
+
+Replace "path/to/your/file.pdf" with the actual path to the PDF file you want to upload. Once you send the request, the files will be added in the uploaded_pdfs folder. 
+
 
 ## References
 - https://fastapi.tiangolo.com/tutorial/bigger-applications/
 - https://www.uvicorn.org/
+- https://fastapi.tiangolo.com/reference/uploadfile/
+- https://fastapi.tiangolo.com/tutorial/request-files/
